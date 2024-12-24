@@ -1,0 +1,6 @@
+1. Layer Caching in Docker -> always copy source code at last so that when you make any change in it and build the docker image again all the layers above it are cached.
+
+2. -p for port mappings -> -p 5000:8000 where 5000 is host port which is mapped with 8000 which is container port.
+    use -P for automatic port mapping -> for this you will have to expose port with 'EXPOSE' keyword in Docker.
+
+3. create docker hub account to push your custom build images.

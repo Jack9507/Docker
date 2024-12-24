@@ -1,0 +1,22 @@
+Docker Networks:
+https://docs.docker.com/engine/network/
+
+Network Types AKA Drivers:
+
+Driver	    Description
+bridge	    The default network driver.
+host	    Remove network isolation between the container and the Docker host.
+none	    Completely isolate a container from the host and other containers.
+overlay	    Overlay networks connect multiple Docker daemons together.
+ipvlan	    IPvlan networks provide full control over both IPv4 and IPv6 addressing.
+macvlan	    Assign a MAC address to a container.
+
+
+Default bridge networks are used from communication between the containers in same network.
+If we have two containers "cont1" & "cont2" with ip addr. "172.17.0.2" & "172.17.0.3" respectively,
+then cont1 can reach the ip address of cont2. 
+
+NOTE: there is no automatic DNS resolution in default bridge network.
+but if you create a custom brigde network then containers in that networks will have automatic DNS resolution.
+
+
